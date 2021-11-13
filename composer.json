@@ -1,7 +1,7 @@
 {
   "autoload": {
     "psr-4": {
-      "php_my_framework\\": "vendor/php_my_framework",
+      "php_my_framework\\": "vendor/php_my_framework/core",
       "app\\": "app"
     }
   },
