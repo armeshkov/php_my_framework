@@ -6,7 +6,7 @@ define("ROOT", dirname(__DIR__));
 define("WWW", ROOT . '/public');
 define("APP", ROOT . '/app');
 define("CORE", ROOT . '/vendor/php_my_framework/core');
-define("LIBS", ROOT . '/vendor/php_my_framework/core/libc');
+define("LIBS", ROOT . '/vendor/php_my_framework/core/libs');
 define("CACHE", ROOT . '/tmp/cache');
 define("CONF", ROOT . '/config');
 define("LAYOUT", 'default');
