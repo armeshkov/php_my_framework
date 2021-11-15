@@ -28,7 +28,7 @@ class ErrorHandler
         error_log("[" . date('Y-m-d H:i:s') . "] Текст ошибки: {$message} | Файл: {$file} | Строка: {$line}\n-----------------\n", 3, ROOT . '/tmp/errors.log');
     }
 
-    protected function displayErrors($errno, $errstr, $errfile, $errline, $response = 404)
+    protected function displayErrors($errno, $errstr, $errfile, $errline, $response=404)
     {
         http_response_code($response);
         if ($response == 404 && !DEBUG) {
@@ -36,7 +36,7 @@ class ErrorHandler
             die;
         }
         if (DEBUG) {
-            require WWW . '/errors/dev.php';
+            require WWW . '/errors/404.php'; #temporary switched from dev.php
         } else {
             require WWW . '/errors/prod.php';
         }
