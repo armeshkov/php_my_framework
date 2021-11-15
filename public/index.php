@@ -7,5 +7,8 @@ require_once LIBS . '/functions.php';
 
 new \php_my_framework\App();
 
-Router::add('posts/add', ['controller' => 'posts', 'action' => 'add']);
-debug(Router::getRoutes());
+$query = rtrim($_SERVER['REQUEST_URI'], '/');
+
+Router::add('^$', ['controller' => 'Main', 'action' => 'index']);
+Router::add('^(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$');
+Router::dispatch($query);
