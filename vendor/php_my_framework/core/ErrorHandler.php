@@ -36,7 +36,7 @@ class ErrorHandler
             die;
         }
         if (DEBUG) {
-            require WWW . '/errors/404.php'; #temporary switched from dev.php
+            require WWW . '/errors/dev.php';
         } else {
             require WWW . '/errors/prod.php';
         }

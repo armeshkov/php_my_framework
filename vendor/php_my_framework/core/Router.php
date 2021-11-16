@@ -26,9 +26,8 @@ class Router
     public static function matchRoute($url)
     {
         foreach (self::$routes as $pattern => $route) {
-            if (preg_match("#$pattern#i", $url, $matches)) {
+            if (preg_match("#{$pattern}#", $url, $matches)) {
                 debug($matches);
-                self::$route = $route;
                 return true;
             }
         }
@@ -39,7 +38,7 @@ class Router
         if (self::matchRoute($url)) {
             echo 'OK';
         } else {
-            throw new \Exception('Страница не найдена', 404);
+            echo 'NO';
         }
     }
 }
