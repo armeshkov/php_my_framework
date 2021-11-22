@@ -2,6 +2,8 @@
 
 namespace php_my_framework\base;
 
+use php_my_framework\Db;
+
 abstract class Model
 {
 
@@ -10,7 +12,7 @@ abstract class Model
     public $rules = [];
 
     public function __construct(){
-
+        Db::instance();
     }
 
 
